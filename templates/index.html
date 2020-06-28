@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Car Classifier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<style>
+body,h1 {font-family: "Raleway", sans-serif; color:blck; font-weight: bold; }
+body, html {height: 100% }
+form{ color:black;}
+</style>
+<body style="background-color: white; background-size: cover; margin-left: 5%;">
+ <div class="login">
+  <h1>What car is it?</h1>
+
+    <div class="Variables">
+    <form action="{{ url_for('predict')}}"method="post" enctype=multipart/form-data>
+
+    <label>Pick image</label>
+    <input type=file name=file>
+ 
+    </div>
+    <br>
+   <br>
+    <div>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict car model</button>
+    </div>
+
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+   {{ prediction }}
+
+ </div>
+
+        <footer>
+            <div class="references container">
+                <a class="github-button" href="https://github.com/zaterka/CarModelClassifier" data-icon="octicon-star" data-show-count="true" aria-label="Star zaterka/CarModelClassifier on GitHub">Star</a>
+                <span class="view-container">
+                    <a href="https://github.com/zaterka/CarModelClassifier" target="_blank">View source on Github</a>
+                </span>
+                <span>Uploaded images are the responsibility of their respective parts.</span>
+            </div>
+        </footer>
+    </body>
+
+</body>
+</html>
