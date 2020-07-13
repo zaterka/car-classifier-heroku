@@ -10,8 +10,6 @@ import os
 cwd = os.getcwd()
 path = Path()
 
-application = Flask(__name__)
-
 model = load_learner(path, 'model/export.pkl')
 
 app = Flask(__name__)
